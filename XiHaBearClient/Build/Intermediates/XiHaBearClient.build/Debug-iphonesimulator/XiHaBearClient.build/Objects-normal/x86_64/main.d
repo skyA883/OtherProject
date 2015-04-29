@@ -1,2 +1,3 @@
-dependencies: /Users/liuxuan/Desktop/XiHaBearClient/XiHaBearClient/main.m \
-  /Users/liuxuan/Desktop/XiHaBearClient/XiHaBearClient/AppDelegate.h
+dependencies: \
+  /Users/liuxuan/GitHubRespository/OtherProject/XiHaBearClient/XiHaBearClient/main.m \
+  /Users/liuxuan/GitHubRespository/OtherProject/XiHaBearClient/XiHaBearClient/AppDelegate.h

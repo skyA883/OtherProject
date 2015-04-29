@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/liuxuan/Desktop/XiHaBearClient/XiHaBearClientTests/XiHaBearClientTests.m \
+  /Users/liuxuan/GitHubRespository/OtherProject/XiHaBearClient/XiHaBearClientTests/XiHaBearClientTests.m \
   /Applications/Xcode\ 2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuiteRun.h \
   /Applications/Xcode\ 2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestSuite.h \
   /Applications/Xcode\ 2.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTestProbe.h \
