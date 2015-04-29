@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-XiHaBearClientTests-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-XiHaBearClientTests-JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-XiHaBearClientTests-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-XiHaBearClientTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>39E5B3C6C2314D6A8900AD4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AA05E20F47A4B8A836A5813</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A3108ACD29D4FAF85E60397</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF5A601CCA474E0997D2A913</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
