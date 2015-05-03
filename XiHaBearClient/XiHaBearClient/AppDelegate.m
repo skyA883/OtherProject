@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "XHTabBarController.h"
+
+
 @interface AppDelegate ()
 
 @end
@@ -14,13 +17,69 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     
-    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    if ([[[UIDevice currentDevice] systemVersion] intValue]>=7.0)
+    {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    }
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
+    [self changeRootViewController:YES];
+    /*
+    [[IFAppSetting shareAppSetting] settingLaunchingWithOptions:launchOptions];
+    
+    [[IFAppSetting shareAppSetting] settingNetworkState];
+     */
+//    [self dataInit];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
+
+- (void)changeRootViewController:(BOOL) isHome
+{
+    if (isHome)
+    {
+        if (self.loginRoot)
+        {
+            [self.loginRoot.view removeFromSuperview];
+            _loginRoot = nil;
+        }
+        
+        if (nil == self.tabBarController)
+        {
+            self.tabBarController = [[XHTabBarController alloc] init];
+        }
+        self.window.rootViewController = self.tabBarController;
+        
+        
+    }else
+    {
+        /*
+        if (self.tabBarController)
+        {
+            [self.tabBarController.view removeFromSuperview];
+            self.tabBarController = nil;
+        }
+        IFLoginViewController *loginView = [[[IFLoginViewController alloc] init] autorelease];
+        self.loginRoot = [[[IFBaseNavigatonController alloc] initWithRootViewController:loginView] autorelease];
+        self.loginRoot.navigationItem.backBarButtonItem = nil;
+        self.window.rootViewController = self.loginRoot;
+         */
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -43,5 +102,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (void)setTabBarItemBadge:(int)viewIndex badge:(NSString *)txt
+{
+    if (_tabBarController && viewIndex<_tabBarController.viewControllers.count)
+    {
+        UITabBarItem* item =  [_tabBarController.tabBar.items objectAtIndex:viewIndex];
+        item.badgeValue = txt;
+    }
+}
+
 
 @end
