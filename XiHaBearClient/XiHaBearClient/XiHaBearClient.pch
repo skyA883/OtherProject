@@ -1,0 +1,14 @@
+//
+//  XiHaBearClient.pch
+//  XiHaBearClient
+//
+//  Created by liuxuan on 15-5-3.
+//  Copyright (c) 2015年 XiHaBear. All rights reserved.
+//
+
+#ifndef XiHaBearClient_XiHaBearClient_pch
+#define XiHaBearClient_XiHaBearClient_pch
+
+#import "GlobleDefine.h"
+
+#endif
