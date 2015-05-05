@@ -13,7 +13,7 @@
 @interface IDPAFRequestManager : AFHTTPRequestOperationManager
 
 
-@property (nonatomic, retain) NSMutableArray *cmds;
+@property (nonatomic, strong) NSMutableArray *cmds;
 
 + (IDPAFRequestManager *)sharedInstance;
 
