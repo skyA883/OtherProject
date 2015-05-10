@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  XiHaBearClient
+//
+//  Created by letv_lzb on 15/5/1.
+//  Copyright (c) 2015年 XiHaBear. All rights reserved.
+//
+
+#ifndef XiHaBearClient_PrefixHeader_pch
+#define XiHaBearClient_PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIDevice+Resolutions.h"
+#import "IDPCore.h"
+#import "IDPMVC.h"
+#import "UINavigationBar+TBCCategory.h"
+#import "UIViewController+TBCCategory.h"
+//#import "TBCStatusHUD.h"
+//#import "MBProgressHUD.h"
+//#import "ProgressHUD.h"
+//#import "UIAlertView+IDPDelegateFree.h"
+//#import "MethodDef.h"
+#import "AppDelegate.h"
+//#import "IFAppSetting.h"
+//#import "IFAppUpdateSetting.h"
+//#import "IFSMSSendModel.h"
+//#import "IFLocationSetting.h"
+#import "AFNetworking.h"
+#endif
+
+
+#import "XHConfig.h"
+
+#define __FILENAME__	[NSString stringWithUTF8String:__FILE__]
+
+#if ! __has_feature(objc_arc)
+
+#define TBSafeRelease(__v) ([__v release], __v = nil);
+#else
+#define TBSafeRelease(__v) (__v = nil);
+#endif
+
+
+#define kDefaultScreenheight ([[UIDevice currentDevice] resolution] == UIDeviceResolution_iPhoneRetina4 ? 568 : 480)
+
+
+#endif
